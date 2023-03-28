@@ -1,1 +1,89 @@
-ff
+<!DOCTYPE html>
+
+<!-- jquery 추가, 필수아님 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- 필수, SheetJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+<!--필수, FileSaver savaAs 이용 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+
+<script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/> 
+
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="content">
+        <div class="content-header">
+            <h5>[데이] 공략</h5>
+        </div>
+        <div class="content-body">
+            <div class="option">
+                <div class="button-wrapper">
+                    <button>공략 보기</button>
+                    <button disabled>활약도 계산기</button>
+                </div>
+                <div class="password-wrapper">
+                    <input type="number" name="password" size="20" value="비번입력">
+                    <button>비번 확인하기</button>
+                </div>
+            </div>
+            <div class="body-content">
+                <div class="guide hidden">
+                    공략 ~~~~ 추후 정리
+                </div>
+                <div class="arrangement">
+                    <div class="button-wrapper">
+                        <button>템플릿 다운로드</button>
+                        <button>템플릿 업로드</button>
+                    </div>
+                    <div id="table-wrapper">
+                        <table id="arrangement-table">
+                            <colgroup>
+                                <col style="width:4%">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                                <col style="width:20%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>순번</th>
+                                    <th>이름</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-footer">
+            
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    jQuery(function($){
+        $("#arrangement-table").DataTable();
+    });
+</script>
